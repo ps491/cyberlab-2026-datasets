@@ -1,0 +1,6 @@
+alice:5f4dcc3b5aa765d61d8327deb882cf99
+bob:e10adc3949ba59abbe56e057f20f883e
+carol:0d107d09f5bbe40cade3de5c71e9e9b7
+dave:aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d
+eve:5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8
+sysadmin:bebe3582a4ac174d3b27eb277eb53ba2

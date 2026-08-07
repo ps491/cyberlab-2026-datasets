@@ -1,0 +1,21 @@
+From: IT-Support <it-support@update-corp.net>
+To: employee@company.local
+Date: Mon, 07 Jun 2026 08:22:14 +0800
+Subject: [URGENT] Password Expiry Notice - Action Required
+
+Dear Employee,
+
+Your corporate password will expire in 24 hours.
+
+To prevent account lockout, please update your password immediately:
+  http://corp-portal-update.xyz/reset?token=eyJhbGci...
+
+Failure to update your password will result in account suspension.
+
+Thank you,
+IT Support Team
+Company Corp.
+
+--- 
+Note: If you did not request this, please ignore this email.
+DO NOT reply to this automated message.

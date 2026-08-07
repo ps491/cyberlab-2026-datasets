@@ -1,0 +1,51 @@
+﻿alert_id,timestamp,src_ip,dst_ip,dst_port,rule_name,severity,category,description,expected_verdict
+ALT-0001,2026-06-07 00:27:00,10.0.0.10,52.216.165.48,443,DATA_EXFILTRATION,Critical,Data Loss,"Scheduled cloud backup to AWS S3, 4.2GB transferred",FP
+ALT-0002,2026-06-07 00:37:00,10.0.0.45,corp-portal-update.xyz,443,PHISHING_URL_CLICK,High,Phishing,User clicked link to corp-portal-update.xyz from email client,TP
+ALT-0003,2026-06-07 00:57:00,45.76.211.31,10.0.0.0,0,PORT_SCAN_EXTERNAL,Medium,Recon,SYN scan against /24 subnet from Internet,TP
+ALT-0004,2026-06-07 01:34:00,10.0.0.67,download.microsoft.com,443,SUSPICIOUS_DOWNLOAD,Medium,Malware,"Windows Update legitimate download (KB5034441), 512MB",FP
+ALT-0005,2026-06-07 02:05:00,10.0.0.40,8.8.8.8,53,UNUSUAL_OUTBOUND,Medium,Data Loss,High DNS query volume — legitimate CDN,FP
+ALT-0006,2026-06-07 02:32:00,10.0.0.20,198.51.100.77,443,DATA_EXFILTRATION,Critical,Data Loss,Outbound transfer >10MB to external C2,TP
+ALT-0007,2026-06-07 11:03:00,10.0.0.20,198.51.100.77,443,MALWARE_C2_BEACON,Critical,Malware,C2 communication pattern (TLS),TP
+ALT-0008,2026-06-07 11:51:00,10.0.0.20,10.0.0.50,445,LATERAL_MOVEMENT_SMB,High,Intrusion,Unusual SMB admin share access,TP
+ALT-0009,2026-06-07 03:45:00,10.0.0.30,185.220.101.99,80,SUSPICIOUS_DOWNLOAD,High,Malware,EXE download from suspicious IP,TP
+ALT-0010,2026-06-07 04:01:00,10.0.0.5,10.0.0.100,80,SQL_INJECTION_DETECTED,High,Web Attack,Security scanner (Nessus) internal scan authorized,FP
+ALT-0011,2026-06-07 04:16:00,203.0.113.88,10.0.0.100,80,XSS_REFLECTED,Medium,Web Attack,Reflected XSS payload <script>alert(1),TP
+ALT-0012,2026-06-07 04:50:00,10.0.0.5,10.0.0.100,80,SQL_INJECTION_DETECTED,High,Web Attack,Pentest team authorized scan,FP
+ALT-0013,2026-06-07 05:06:00,10.0.0.203,10.0.0.0,0,PORT_SCAN_INTERNAL,Medium,Recon,Network monitoring agent (Zabbix),FP
+ALT-0014,2026-06-07 05:38:00,10.0.0.201,10.0.0.0,0,PORT_SCAN_INTERNAL,Medium,Recon,IT vulnerability scan (Nessus),FP
+ALT-0015,2026-06-07 06:10:00,10.0.0.200,10.0.0.10,22,BRUTE_FORCE_SSH,Medium,Auth Attack,Automated deployment script (Ansible),FP
+ALT-0016,2026-06-07 06:36:00,10.0.0.5,10.0.0.100,80,DIRECTORY_TRAVERSAL,High,Web Attack,Web app scanner (DAST authorized),FP
+ALT-0017,2026-06-07 06:48:00,103.21.244.0,10.0.0.100,80,SQL_INJECTION_DETECTED,High,Web Attack,UNION SELECT payload detected in GET parameter /search,TP
+ALT-0018,2026-06-07 15:06:00,10.0.0.20,10.0.0.100,0,PRIVILEGE_ESCALATION,Critical,Intrusion,Sudo command executed by non-admin user,TP
+ALT-0019,2026-06-07 08:11:00,10.0.0.50,52.84.125.30,443,DATA_EXFILTRATION,Critical,Data Loss,Scheduled cloud backup to AWS S3,FP
+ALT-0020,2026-06-07 08:28:00,45.152.66.23,10.0.0.10,22,BRUTE_FORCE_SSH,Medium,Auth Attack,300 failed SSH login attempts in 5 min,TP
+ALT-0021,2026-06-07 09:02:00,10.0.0.1,10.0.0.100,80,BRUTE_FORCE_LOGIN,High,Auth Attack,Load balancer health check,FP
+ALT-0022,2026-06-07 09:17:00,10.0.0.45,34.117.59.81,443,UNUSUAL_OUTBOUND,Medium,Data Loss,Google Workspace sync,FP
+ALT-0023,2026-06-07 10:02:00,10.0.0.20,198.51.100.77,443,MALWARE_C2_BEACON,Critical,Malware,Periodic 30s beacon to known C2 IP,TP
+ALT-0024,2026-06-07 10:30:00,10.0.0.202,10.0.0.10,22,BRUTE_FORCE_SSH,Medium,Auth Attack,CI/CD pipeline deployment (Jenkins),FP
+ALT-0025,2026-06-07 03:14:00,185.220.101.42,10.0.0.100,80,WEBSHELL_ACCESS,Critical,Intrusion,GET /uploads/shell.php?cmd= pattern,TP
+ALT-0026,2026-06-07 11:25:00,91.108.56.22,10.0.0.100,80,DIRECTORY_TRAVERSAL,High,Web Attack,Path traversal ../../etc/passwd,TP
+ALT-0027,2026-06-07 11:39:00,10.0.0.60,13.107.42.14,443,MALWARE_C2_BEACON,Critical,Malware,Periodic connection to Microsoft Teams CDN (Teams heartbeat),FP
+ALT-0028,2026-06-07 02:51:00,185.220.101.42,10.0.0.100,80,SQL_INJECTION_DETECTED,High,Web Attack,SQL injection pattern in GET parameter,TP
+ALT-0029,2026-06-07 12:15:00,185.234.219.42,10.0.0.100,80,BRUTE_FORCE_LOGIN,High,Auth Attack,99 failed web login attempts,TP
+ALT-0030,2026-06-07 12:43:00,10.0.0.200,10.0.0.0,0,PORT_SCAN_INTERNAL,Medium,Recon,IT asset inventory scan (weekly),FP
+ALT-0031,2026-06-07 12:50:00,10.0.0.70,10.0.0.100,80,UNUSUAL_TRAFFIC_VOLUME,Low,Network,High HTTP traffic — marketing campaign,FP
+ALT-0032,2026-06-07 13:02:00,10.0.0.80,10.0.0.100,443,AUTH_FAILURE_MULTIPLE,Low,Auth Attack,Password manager auto-fill error,FP
+ALT-0033,2026-06-07 13:10:00,10.0.0.55,1.1.1.1,53,UNUSUAL_OUTBOUND,Medium,Data Loss,Cloudflare DNS — legitimate,FP
+ALT-0034,2026-06-07 13:27:00,10.0.0.204,10.0.0.0,0,SCAN_DETECTED,Low,Recon,SNMP community scan (network team),FP
+ALT-0035,2026-06-07 13:40:00,10.0.0.90,10.0.0.100,80,BRUTE_FORCE_LOGIN,Medium,Auth Attack,SharePoint crawler (internal),FP
+ALT-0036,2026-06-07 13:59:00,10.0.0.95,api.slack.com,443,UNUSUAL_OUTBOUND,Medium,Data Loss,Slack webhook — DevOps notification,FP
+ALT-0037,2026-06-07 14:24:00,10.0.0.5,10.0.0.100,80,SQL_INJECTION_DETECTED,High,Web Attack,SAST scanner false positive,FP
+ALT-0038,2026-06-07 14:40:00,10.0.0.100,10.0.0.200,389,AUTH_FAILURE_MULTIPLE,Low,Auth Attack,LDAP bind retry after config change,FP
+ALT-0039,2026-06-07 14:50:00,10.0.0.22,198.51.100.77,443,UNUSUAL_TRAFFIC_VOLUME,Low,Network,Sustained high-volume to C2,TP
+ALT-0040,2026-06-07 07:27:00,10.0.0.20,,0,SUSPICIOUS_PROCESS,High,Endpoint,cmd.exe spawned by apache2,TP
+ALT-0041,2026-06-07 15:22:00,45.155.205.12,10.0.0.100,80,WEBSHELL_ACCESS,Critical,Intrusion,GET /tmp/cmd.php?c=whoami,TP
+ALT-0042,2026-06-07 15:33:00,10.0.0.22,10.0.0.55,445,LATERAL_MOVEMENT_SMB,High,Intrusion,Admin share mapping from compromised host,TP
+ALT-0043,2026-06-07 15:59:00,203.0.113.99,10.0.0.100,80,XSS_STORED,High,Web Attack,Stored XSS in comment field,TP
+ALT-0044,2026-06-07 16:12:00,10.0.0.22,185.234.219.42,443,DATA_EXFILTRATION,Critical,Data Loss,"Large encrypted transfer to IOC IP, 4.8GB",TP
+ALT-0045,2026-06-07 16:39:00,10.0.0.18,malware-update.xyz,80,PHISHING_URL_CLICK,High,Phishing,Known malware distribution domain,TP
+ALT-0046,2026-06-07 17:05:00,91.108.56.33,10.0.0.0,0,PORT_SCAN_EXTERNAL,Medium,Recon,Shodan-like scan from TOR exit node,TP
+ALT-0047,2026-06-07 17:30:00,196.203.14.55,10.0.0.12,22,BRUTE_FORCE_SSH,Medium,Auth Attack,External SSH brute force,TP
+ALT-0048,2026-06-07 17:37:00,103.21.244.12,10.0.0.100,80,SQL_INJECTION_DETECTED,High,Web Attack,Blind SQLi time-based payload,TP
+ALT-0049,2026-06-07 18:01:00,10.0.0.33,198.51.100.77,443,MALWARE_C2_BEACON,Critical,Malware,New host beaconing same C2,TP
+ALT-0050,2026-06-07 18:26:00,10.0.0.22,,0,PRIVILEGE_ESCALATION,Critical,Intrusion,Cron job modification by www-data,TP

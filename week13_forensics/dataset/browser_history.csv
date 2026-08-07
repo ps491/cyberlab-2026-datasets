@@ -1,0 +1,12 @@
+timestamp,url,title,visit_count,browser
+2026-06-01 08:45:12,https://mail.company.com,Company Webmail,45,Chrome
+2026-06-01 09:03:22,https://www.google.com/search?q=quarterly+report,Google Search,12,Chrome
+2026-06-01 09:15:44,https://docs.company.com/reports/Q1-2026,Q1 2026 Financial Report,3,Chrome
+2026-06-01 10:30:01,https://www.youtube.com,YouTube,8,Chrome
+2026-06-01 11:00:33,https://docs.company.com/clients/export,Client Database Export,2,Chrome
+2026-06-01 13:45:07,http://185.220.101.99/tools,Free Download Tools,1,Chrome
+2026-06-01 13:45:31,http://185.220.101.99/tools/update_v2.exe,Download: update_v2.exe,3,Chrome
+2026-06-01 13:46:02,http://185.220.101.99/tools/update_v2.exe,Download: update_v2.exe,1,Chrome
+2026-06-01 14:02:15,https://docs.company.com/clients/export,Client Database Export,1,Chrome
+2026-06-01 14:15:22,https://mail.company.com,Company Webmail,2,Chrome
+2026-06-01 16:20:55,https://www.google.com,Google,1,Chrome

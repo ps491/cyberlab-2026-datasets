@@ -1,0 +1,37 @@
+# Week09 Password Cracking Lab ¡X hashes.txt
+# Format: username:hash_type:hash
+# Crack with: john --format=raw-md5 hashes_md5.txt
+
+# === MD5 Hashes ===
+admin:MD5:482c811da5d5b4bc6d497ffa98491e38
+user1:MD5:e10adc3949ba59abbe56e057f20f883e
+alice:MD5:0d107d09f5bbe40cade3de5c71e9e9b7
+bob:MD5:d8578edf8458ce06fbc5bb76a58c5ca4
+charlie:MD5:f25a2fc72690b780b2a14e140ef6a9e0
+dave:MD5:0571749e2ac330a7455809c6b0e7af90
+eve:MD5:d0763edaa9d9bd2a9516280e9044d885
+frank:MD5:8621ffdbc5698829397d97767ac13db3
+svc_acct:MD5:12cb8180ee459a218502993fffa9496d
+backup:MD5:4ece57a61323b52ccffdbef021956754
+
+# === SHA1 Hashes ===
+admin:SHA1:cbfdac6008f9cab4083784cbd1874f76618d2a97
+user1:SHA1:7c4a8d09ca3762af61e59520943dc26494f8941b
+alice:SHA1:b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3
+bob:SHA1:b1b3773a05c0ed0176787a4f1574ff0075f7521e
+charlie:SHA1:ee8d8728f435fd550f83852aabab5234ce1da528
+dave:SHA1:8d6e34f987851aa599257d3831a1af040886842f
+eve:SHA1:ab87d24bdc7452e55738deb5f868e1f16dea5ace
+frank:SHA1:af8978b1797b72acfff9595a5a2a373ec3d9106d
+svc_acct:SHA1:f4d28093e2cac82e78f899a9c0f33d151ee03c25
+backup:SHA1:874572e7a5ae6a49466a6ac578b98adba78c6aa6
+
+# === Notes ===
+# MD5 format for John: john --format=raw-md5 hashes_md5.txt
+# SHA1 format for John: john --format=raw-sha1 hashes_sha1.txt
+# Wordlist: john --wordlist=/usr/share/wordlists/rockyou.txt
+
+# Challenge questions:
+# 1. Which accounts use weak passwords?
+# 2. Which accounts are safe from dictionary attacks?
+# 3. What password policy would prevent these vulnerabilities?

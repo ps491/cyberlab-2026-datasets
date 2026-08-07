@@ -1,0 +1,12 @@
+1. https://github.com/xammi/traffic_parser/tree/master/samples
+課程項目：安全分析。
+主題 1：流量解析器。
+輸入： .pcap 格式的網路流量。 「附加等級」：即時擷取網路介面流量。
+
+輸出：從流量中恢復的資源檔案。檔案命名：唯一哈希值 + 與類型對應的副檔名。
+
+至少需要實作以下協議：http、smtp、pop3、ftp。
+「附加等級」：smb、dns、icq 協定。
+
+實作範例：sniff.su/ (Intercepter-NG)
+
