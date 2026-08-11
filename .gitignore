@@ -1,3 +1,5 @@
 # 這個 repo 全部內容都是要發布的教學資料集，不套用系統的全域 .gitignore（*.log 等
 # Visual Studio 建置產物規則）——那些規則會誤殺我們真正要發布的 .log 資料檔。
 !*.log
+# W13 update_v2.exe 是 sha256sum 練習用的教學佔位檔，不是真實執行檔，同樣需要解除全域 *.exe 規則
+!*.exe

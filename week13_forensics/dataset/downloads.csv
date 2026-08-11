@@ -1,4 +1,4 @@
 timestamp,filename,source_url,size_bytes,sha256,status
 2026-06-01 09:15:51,Q1-2026-Report.pdf,https://docs.company.com/reports/Q1-2026,2456789,a3f4d7e8b2c1f6...9e0a,completed
-2026-06-01 13:46:05,update_v2.exe,http://185.220.101.99/tools/update_v2.exe,238,d369904b7dfcc941e0e63bce1379c3c06260866fd7b91fcb72e1e482255bd670,completed
+2026-06-01 13:46:05,update_v2.exe,http://185.220.101.99/tools/update_v2.exe,233,b510d8950aa6c46478658f2d0c6b3670ab63eede43e584d8e3653f0e2d04b840,completed
 2026-06-01 14:02:33,client_export.xlsx,https://docs.company.com/clients/export,892341,b8c3e1f4a7d2...5c9f,completed

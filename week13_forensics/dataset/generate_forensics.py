@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Week13 — Digital Forensics CSV Generator (v1.1)
+"""Week13 — Digital Forensics CSV Generator (v1.2)
+
+變更說明（v1.2，2026-08-11）：
+  - 全部改用 LF（\\n）換行，取代舊版 CRLF（\\r\\n）。
+    舊版透過 VBoxManage copyto 逐位元組複製進 Ubuntu VM，CRLF 全程不受影響；
+    改用 Codespace 後檔案改由 git checkout 送達，repo 的 .gitattributes（eol=lf）
+    會把 CRLF 靜默正規化成 LF，導致學生實際算出的 sha256 跟舊版 CRLF 雜湊值對不上。
+    直接在來源改用 LF，雜湊值才會與 git checkout 後的實際內容一致。
 
 變更說明（v1.1，2026-06-18）：
   - browser_history: 新增 14:02:15 記錄（修正時序盲點；行數 10 → 11）
@@ -16,14 +23,14 @@ os.makedirs(BASE_DIR, exist_ok=True)
 
 # ─── update_v2.exe（教學佔位檔，供 sha256sum 練習）────────────────────────
 fake_exe_content = (
-    "CYBERLAB-W13-FORENSICS-DATASET\r\n"
-    "update_v2.exe (educational placeholder for digital forensics training)\r\n"
-    "Origin: http://185.220.101.99/tools/update_v2.exe\r\n"
-    "This file is NOT malware. For educational use only.\r\n"
-    "CyberLab Teaching Asset v1.0\r\n"
+    "CYBERLAB-W13-FORENSICS-DATASET\n"
+    "update_v2.exe (educational placeholder for digital forensics training)\n"
+    "Origin: http://185.220.101.99/tools/update_v2.exe\n"
+    "This file is NOT malware. For educational use only.\n"
+    "CyberLab Teaching Asset v1.0\n"
 )
 exe_path = os.path.join(BASE_DIR, "update_v2.exe")
-with open(exe_path, "w", newline="") as f:
+with open(exe_path, "w", newline="\n") as f:
     f.write(fake_exe_content)
 
 exe_bytes = fake_exe_content.encode("utf-8")
@@ -47,7 +54,7 @@ browser_rows = [
 ]
 
 with open(os.path.join(BASE_DIR, "browser_history.csv"), "w", newline="") as f:
-    csv.writer(f).writerows(browser_rows)
+    csv.writer(f, lineterminator='\n').writerows(browser_rows)
 
 # ─── downloads.csv（3 筆）───────────────────────────────────────────────────
 download_rows = [
@@ -58,7 +65,7 @@ download_rows = [
 ]
 
 with open(os.path.join(BASE_DIR, "downloads.csv"), "w", newline="") as f:
-    csv.writer(f).writerows(download_rows)
+    csv.writer(f, lineterminator='\n').writerows(download_rows)
 
 # ─── usb_history.csv（8 筆）─────────────────────────────────────────────────
 usb_rows = [
@@ -74,9 +81,9 @@ usb_rows = [
 ]
 
 with open(os.path.join(BASE_DIR, "usb_history.csv"), "w", newline="") as f:
-    csv.writer(f).writerows(usb_rows)
+    csv.writer(f, lineterminator='\n').writerows(usb_rows)
 
-print("=== W13 Dataset Generator v1.1 ===")
+print("=== W13 Dataset Generator v1.2 ===")
 print(f"browser_history.csv : {len(browser_rows)-1} 筆（含標頭共 {len(browser_rows)} 行）")
 print(f"downloads.csv       : {len(download_rows)-1} 筆")
 print(f"usb_history.csv     : {len(usb_rows)-1} 筆")
